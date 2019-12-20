@@ -1,20 +1,34 @@
+:root {
+  --primary-color: lightgreen;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html,
 body {
+  font-family: Tahoma, sans-serif;
   height: 100%;
   padding: 0;
   margin: 0;
 }
 
-header {
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+}
+
+.app-header {
   display: flex;
   justify-content: space-between;
 }
 
-header a {
+.app-header a {
   text-decoration: none;
   color: #000;
 }
@@ -34,22 +48,120 @@ ul li {
 .logo-container {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 /* Navigation */
 
+nav {
+  flex: 3;
+}
+
 .nav {
   display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 .nav a {
+  display: inline-block;
   padding: 10px 20px;
+}
+
+.nav a:hover {
+  background-color: var(--primary-color);
+}
+
+.active {
+  background-color: var(--primary-color);
+}
+
+/* main */
+
+main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+/* User actions */
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-actions a {
+  color: var(--primary-color);
+}
+
+.user-actions a:hover {
+  text-decoration: underline;
+}
+
+/* Card */
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 26%;
+
+  padding: 1.5rem;
+
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 0 0 13px grey;
+}
+
+.card section {
+  margin-bottom: .7rem;
+}
+
+.card footer {
+  display: flex;
+  margin-top: auto;
+}
+
+.card footer button {
+  flex: 1;
+}
+
+.card .circle {
+  display: inline-block;
+
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: .7rem;
+
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 /* Utilities */
 
 .u-border-top-large {
-  border-top: 8px solid lightgreen;
+  border-top: 8px solid var(--primary-color);
 }
 
+.u-weight-bold {
+  font-weight: bold;
+}
 
+.u-bg-primary {
+  background-color: var(--primary-color);
+}
+
+.u-border-left {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.u-border-right {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
