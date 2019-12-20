@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Logo */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation */
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  padding: 10px 20px;
+}
+
+/* Utilities */
+
+.u-border-top-large {
+  border-top: 8px solid lightgreen;
+}
+
+
